@@ -77,6 +77,7 @@ M_LINKS_NAVBAR1 = [('Why?', 'why/', 'why', []),
                         ('Typography', 'css/typography/', 'css/typography'),
                         ('Components', 'css/components/', 'css/components'),
                         ('Page layout', 'css/page-layout/', 'css/page-layout'),
+                        ('Presentation', 'css/presentation/', 'css/presentation'),
                         ('Themes', 'css/themes/', 'css/themes')]),
                    ('Themes', 'themes/', 'themes', [
                         ('Writing reST content', 'themes/writing-rst-content/', 'pelican/writing-content'),
@@ -92,6 +93,7 @@ M_LINKS_NAVBAR2 = [('Doc generators', 'documentation/', 'documentation', [
                         ('Links and other', 'plugins/links/', 'plugins/links'),
                         ('Plots and graphs', 'plugins/plots-and-graphs/', 'plugins/plots-and-graphs'),
                         ('Metadata', 'plugins/metadata/', 'plugins/metadata')]),
+                   ('Presentation tool', 'presentation/', 'presentation', []),
                    ('GitHub', 'https://github.com/mosra/m.css', '', [])]
 
 M_LINKS_FOOTER1 = [('m.css', '/'),
@@ -107,6 +109,7 @@ M_LINKS_FOOTER2 = [('CSS', 'css/'),
                    ('Typography', 'css/typography/'),
                    ('Components', 'css/components/'),
                    ('Page layout', 'css/page-layout/'),
+                   ('Presentation', 'css/presentation/'),
                    ('Themes', 'css/themes/')]
 
 M_LINKS_FOOTER3 = [('Themes', 'themes/'),
@@ -114,7 +117,9 @@ M_LINKS_FOOTER3 = [('Themes', 'themes/'),
                    ('Pelican', 'themes/pelican/'),
                    ('', ''),
                    ('Doc generators', 'documentation/'),
-                   ('Doxygen C++ theme', 'documentation/doxygen/')]
+                   ('Doxygen C++ theme', 'documentation/doxygen/'),
+                   ('', ''),
+                   ('Presentation tool', 'presentation/')]
 
 M_LINKS_FOOTER4 = [('Plugins', 'plugins/'),
                    ('HTML sanity', 'plugins/htmlsanity/'),
@@ -199,4 +204,4 @@ CATEGORIES_SAVE_AS = None # Not used
 TAGS_SAVE_AS = None # Not used
 
 SLUGIFY_SOURCE = 'basename'
-PATH_METADATA = '(?P<slug>.+).rst'
+PATH_METADATA = '(?P<slug>.+).(rst|html)'

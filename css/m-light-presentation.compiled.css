@@ -1,4 +1,4 @@
-/* Generated using `./postprocess.py m-light.css`. Do not edit. */
+/* Generated using `./postprocess.py m-light-presentation.css`. Do not edit. */
 
 /*
     This file is part of m.css.
@@ -1768,693 +1768,202 @@ li:last-child > div.m-plot:last-child, li:last-child > div.m-plot.m-nopadb {
   margin-bottom: 0;
 }
 
-body > header > nav {
-  width: 100%;
-  background-color: #ffffff;
-  min-height: 3rem;
-}
-body > header > nav.m-navbar-landing,
-body > header > nav.m-navbar-cover {
+html {
+  font-size: 2.49vw;
   background-color: transparent;
-  position: relative;
 }
-body > header > nav.m-navbar-landing {
-  opacity: 0.8;
-}
-body > header > nav.m-navbar-cover {
-  background-color: rgba(255, 255, 255, 0.25);
-  opacity: 1;
-}
-body > header > nav.m-navbar-landing:hover,
-body > header > nav.m-navbar-cover:hover {
-  background-color: rgba(255, 255, 255, 0.75);
-  opacity: 1;
-}
-body> header > nav.m-navbar-landing:target,
-body> header > nav.m-navbar-cover:target {
-  background-color: #ffffff;
-  opacity: 1;
-}
-body > header > nav.m-navbar-landing #m-navbar-brand.m-navbar-brand-hidden {
-  visibility: hidden;
-}
-body > header > nav.m-navbar-landing:target #m-navbar-brand.m-navbar-brand-hidden {
-  visibility: visible;
-}
-body > header > nav {
-  margin-left: auto;
-  margin-right: auto;
-  color: #000000;
-}
-body > header > nav a {
-  text-decoration: none;
-  text-transform: lowercase;
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 2.75rem;
-  color: #000000;
-}
-body > header > nav #m-navbar-brand, body > header > nav a#m-navbar-show, body > header > nav a#m-navbar-hide {
-  font-weight: normal;
-  font-size: 1.125rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-body > header > nav a#m-navbar-brand, body > header > nav #m-navbar-brand a {
-  text-transform: lowercase;
-}
-body > header > nav #m-navbar-brand a {
-  padding-left: 0;
-  padding-right: 0;
-}
-body > header > nav #m-navbar-brand .m-thin {
-  font-weight: normal;
-}
-body > header > nav #m-navbar-brand .m-breadcrumb {
-  color: #bdbdbd;
-}
-body > header > nav a#m-navbar-show:before, body > header > nav a#m-navbar-hide:before {
-  content:'\2630';
-}
-body > header > nav #m-navbar-collapse {
-  padding-bottom: 1rem;
-}
-body > header > nav #m-navbar-collapse li {
-  border-style: solid;
-  border-color: transparent;
-  border-width: 0 0 0 0.25rem;
-  margin-left: -1rem;
-}
-body > header > nav #m-navbar-collapse li a {
-  border-style: solid;
-  border-color: transparent;
-  line-height: 1.5rem;
-  margin-left: -0.25rem;
-  padding-left: 0.75rem;
-  border-width: 0 0 0 0.25rem;
-  width: 100%;
-}
-body > header > nav #m-navbar-collapse li a#m-navbar-current {
-  color: #ea7944;
-  border-color: #ea7944;
-}
-body > header > nav ol {
-  list-style-type: none;
-  margin: 0;
-}
-body > header > nav ol ol {
-  padding-left: 1.5rem;
-}
-body > header > nav .m-row > [class*='m-col-'] {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-body > header > nav a:hover, body > header > nav a:focus, body > header > nav a:active {
-  color: #cb4b16;
-}
-body > header > nav #m-navbar-collapse li:hover {
-  border-color: #cb4b16;
-}
-body > header > nav #m-navbar-collapse li a:hover,
-body > header > nav #m-navbar-collapse li a:focus,
-body > header > nav #m-navbar-collapse li a:active {
-  border-color: #cb4b16;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-body > header > nav.m-navbar-landing #m-navbar-collapse li a:hover,
-body > header > nav.m-navbar-cover #m-navbar-collapse li a:hover,
-body > header > nav.m-navbar-landing #m-navbar-collapse li a:focus,
-body > header > nav.m-navbar-cover #m-navbar-collapse li a:focus,
-body > header > nav.m-navbar-landing #m-navbar-collapse li a:active,
-body > header > nav.m-navbar-cover #m-navbar-collapse li a:active {
-  background-color: var(--header-link-active-background-color-semi);
-}
-body > header > nav #m-navbar-hide {
-  display: none;
-}
-body > header > nav:target #m-navbar-collapse {
-  display: block;
-}
-body > header > nav:target #m-navbar-show {
-  display: none;
-}
-body > header > nav:target #m-navbar-hide {
-  display: inline-block;
-}
-@media screen and (min-width: 768px) {
-  body > header > nav #m-navbar-show, body > header > nav #m-navbar-hide,
-  body > header > nav:target #m-navbar-show, body > header > nav:target #m-navbar-hide {
-    display: none;
-  }
-  body > header > nav #m-navbar-collapse li a {
-    line-height: 2.75rem;
-  }
-  body > header > nav a, body > header > nav #m-navbar-collapse li a {
-    margin-left: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    white-space: nowrap;
-  }
-  body > header > nav #m-navbar-collapse {
-    padding-bottom: 0;
-  }
-  body > header > nav #m-navbar-collapse li ol {
-    background-color: #ffffff;
-  }
-  body > header > nav #m-navbar-collapse ol ol li {
-    margin-left: 0;
-    padding-left: 0;
-    border-left-width: 0;
-  }
-  body > header > nav #m-navbar-collapse ol ol li a {
-    padding-left: 0.75rem;
-  }
-  body > header > nav #m-navbar-collapse > .m-row > ol > li {
-    margin-left: 0;
-    border-left-width: 0;
-  }
-  body > header > nav #m-navbar-collapse > .m-row > ol > li > a {
-    border-width: 0.25rem 0 0 0;
-  }
-  body > header > nav #m-navbar-collapse ol {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  body > header > nav #m-navbar-collapse > .m-row > ol, body > header > nav #m-navbar-collapse > .m-row > ol > li {
-    float: left;
-  }
-  body > header > nav #m-navbar-collapse ol ol {
-    z-index: 99999;
-    position: absolute;
-    visibility: hidden;
-  }
-  body > header > nav #m-navbar-collapse li:hover ol {
-    visibility: visible;
-  }
-}
-body > footer {
-  width: 100%;
-}
-body > footer > nav {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  font-size: 0.85rem;
-  text-align: center;
-  color: #7c7c7c;
-  background-color: #eeeeee;
-}
-body > footer > nav h3, body > footer > nav h3 a {
-  text-transform: uppercase;
-  font-weight: normal;
-}
-body > footer > nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-body > footer > nav a {
-  text-decoration: none;
-  text-transform: lowercase;
-  color: #191919;
-}
-body > footer > nav a:hover, body > footer > nav a:focus, body > footer > nav a:active {
-  color: #494949;
-}
-body > main {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-article h1 {
-  font-size: 1.75rem;
-}
-article h1 .m-breadcrumb {
-  color: #bdbdbd;
-  font-weight: normal;
-}
-article h1 .m-breadcrumb a {
-  color: #cb4b16;
-}
-article h1 .m-breadcrumb a:hover, article h1 a:focus, article h1 a:active {
-  color: #802f0e;
-}
-article > header h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-article h1 a, article > header h1, article > header h1 a,
-article section > h2, article section > h2 a,
-article section > h3, article section > h3 a,
-article section > h4, article section > h4 a,
-article section > h5, article section > h5 a,
-article section > h6, article section > h6 a {
-  color: #cb4b16;
-}
-article h1 a:hover, article > header h1 a:hover, article > header h1 a:focus, article > header h1 a:active,
-article section > h2 a:hover, article section > h2 a:focus, article section > h2 a:active,
-article section > h3 a:hover, article section > h3 a:focus, article section > h3 a:active,
-article section > h4 a:hover, article section > h4 a:focus, article section > h4 a:active,
-article section > h5 a:hover, article section > h5 a:focus, article section > h5 a:active,
-article section > h6 a:hover, article section > h6 a:focus, article section > h6 a:active {
-  color: #802f0e;
-}
-article > header .m-date {
-  display: block;
-  width: 2.5rem;
-  float: left;
-  text-align: center;
-  line-height: 95%;
-  font-size: 0.75rem;
-  font-weight: normal;
-  white-space: nowrap;
-  border-right-style: solid;
-  border-right-width: 0.125rem;
-  border-color: #cb4b16;
-  padding-right: 0.75rem;
-  margin-top: -0.1rem;
-  margin-right: 0.75rem;
-  margin-bottom: 0.25rem;
-}
-article > header .m-date-day {
-  display: block;
-  font-weight: bold;
-  padding-top: 0.2rem;
-  padding-bottom: 0.15rem;
-  font-size: 1.25rem;
-}
-article > header p {
-  color: #7a7a7a;
-  font-size: 1.125rem;
-}
-article > header h1::after {
-  content: " ";
-  clear: both;
-  display: table;
-}
-article > footer {
-  color: #969696;
-}
-article > footer p {
-  font-style: italic;
-  font-size: 0.85rem;
-  text-indent: 0;
-}
-article section:target {
-  margin-left: -1.0rem;
-  border-left-style: solid;
-  border-left-width: 0.25rem;
-  padding-left: 0.75rem;
-  border-color: #cb4b16;
-}
-article h1 a, article > header h1 a, article section > h2 a, article section > h3 a,
-article section > h4 a, article section > h5 a, article section > h6 a {
-  text-decoration: none;
-}
-#m-landing-image, #m-cover-image, article#m-jumbo > header #m-jumbo-image {
-  background-size: cover;
-  background-color: #666666;
-  background-position: center center;
-  background-repeat: no-repeat;
-  margin-top: -4rem;
-  padding-top: 5rem;
-}
-#m-landing-image {
-  color: #ffffff;
-}
-#m-cover-image {
-  height: 30rem;
-  margin-bottom: -26rem;
-}
-#m-landing-cover h1 {
-  font-size: 2.8rem;
-  margin-top: -0.5rem;
-  padding-left: 1.5rem;
-  padding-bottom: 1rem;
-  text-transform: lowercase;
-}
-#m-landing-cover {
-  padding-bottom: 10rem;
-  margin-bottom: -6rem;
-}
-article#m-jumbo {
-  margin-top: -1rem;
-}
-#m-landing-cover, #m-cover-image > div, article#m-jumbo > header #m-jumbo-cover {
-  background: linear-gradient(transparent 0%, transparent 50%, #ffffff 100%);
-  width: 100%;
-  height: 100%;
-}
-article#m-jumbo > header h1, article#m-jumbo > header h2 {
-  text-align: center;
-  font-weight: bold;
-}
-article#m-jumbo > header a {
-  text-decoration: none;
-}
-article#m-jumbo > header #m-jumbo-cover {
-  padding-bottom: 5rem;
-}
-article#m-jumbo > header #m-jumbo-image {
-  font-size: 2.5vmin;
-  margin-bottom: -3rem;
-}
-article#m-jumbo > header h1 {
-  font-size: 10vmin;
-}
-article#m-jumbo > header h2 {
-  font-size: 3vmin;
-}
-@media screen and (max-height: 640px) , screen and (max-width: 640px) {
-  article#m-jumbo > header h1 {
-    font-size: 3rem;
-  }
-  article#m-jumbo > header #m-jumbo-image, article#m-jumbo > header h2 {
-    font-size: 1rem;
-  }
-}
-article#m-jumbo > header, article#m-jumbo > header h1, article#m-jumbo > header a {
-  color: #ffffff;
-}
-article#m-jumbo > header a:hover, article#m-jumbo > header a:focus, article#m-jumbo > header a:active {
-  color: #f0f0f0;
-}
-article#m-jumbo.m-inverted > header, article#m-jumbo.m-inverted > header h1, article#m-jumbo.m-inverted > header a {
-  color: #000000;
-}
-article#m-jumbo.m-inverted > header a:hover, article#m-jumbo.m-inverted > header a:focus, article#m-jumbo.m-inverted > header a:active {
-  color: #0f0f0f;
-}
-.m-landing-news h3 a {
-  color: #000000;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.m-landing-news h3 a:hover, .m-landing-news h3 a:hover, .m-landing-news h3 a:focus, .m-landing-news h3 a:active {
-  color: #cb4b16;
-}
-.m-landing-news time {
-  display: inline-block;
-  margin-left: 1rem;
-  float: right;
-}
-.m-article-pagination {
-  text-align: center;
+article > aside, article > section {
+  height: 100vh;
   padding: 1rem;
 }
-nav.m-navpanel {
-  text-align: center;
+article > aside {
+  background-color: #ffffff;
 }
-nav.m-navpanel h3 {
-  text-transform: uppercase;
-  font-weight: normal;
+article > aside > h1 {
+  font-size: 4rem;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
 }
-nav.m-navpanel ol {
-  text-transform: lowercase;
+article > section {
+  position: relative;
+  background-color: #ffffff;
 }
-nav.m-navpanel ol, nav.m-navpanel ul {
-  list-style-type: none;
-  padding: 0;
+article > section.m-presentation-cover {
+  background-size: cover;
+  background-color: #ffffff;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
-nav.m-navpanel a {
-  color: #292929;
-  text-decoration: none;
+article > section > h1 {
+  margin: -1rem;
+  padding-top: 7rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 100vh;
+  font-size: 4rem;
 }
-nav.m-navpanel a:hover, nav.m-navpanel a:focus, nav.m-navpanel a:active {
+article > section:not(.m-presentation-cover) > h1 {
+  background-color: #ffffff;
+}
+article > section.m-presentation-cover > h1,
+article > section.m-presentation-cover > h2 {
+  color: #ffffff;
+}
+article > section.m-presentation-cover.m-inverted > h1,
+article > section.m-presentation-cover.m-inverted > h2 {
+  color: #000000;
+}
+article > section > h1 + h2 {
+  margin-top: -100vh;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding-top: 13rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 2rem;
+}
+article > section > h2:first-child {
   color: #cb4b16;
+  line-height: 3.5rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  margin-top: -1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 1rem;
+  background-color: #ffffff;
 }
-ul.m-tagcloud li { display: inline; }
-ul.m-tagcloud li.m-tag-1 { font-size: 0.75rem; }
-ul.m-tagcloud li.m-tag-2 { font-size: 0.825rem; }
-ul.m-tagcloud li.m-tag-3 { font-size: 1rem; }
-ul.m-tagcloud li.m-tag-4 { font-size: 1.25rem; }
-ul.m-tagcloud li.m-tag-5 { font-size: 1.5rem; }
-article section:target figure.m-code-figure, article section:target figure.m-console-figure {
-  z-index: 1;
+article > section.m-presentation-background > h2:first-child {
+  background-color: rgba(255, 255, 255, 0.25);
 }
-article, article > header, article section { margin-bottom: 1rem; }
-article:last-child, article section:last-child { margin-bottom: 0; }
-.m-container-inflatable section:target > .m-note,
-.m-container-inflatable section:target > .m-frame,
-.m-container-inflatable section:target > .m-block,
-.m-container-inflatable section:target > pre,
-.m-container-inflatable section:target > figure.m-code-figure > pre:first-child,
-.m-container-inflatable section:target > figure.m-console-figure > pre:first-child,
-.m-container-inflatable section:target section > .m-note,
-.m-container-inflatable section:target section > .m-frame,
-.m-container-inflatable section:target section > .m-block,
-.m-container-inflatable section:target section > pre,
-.m-container-inflatable section:target section > figure.m-code-figure > pre:first-child,
-.m-container-inflatable section:target section > figure.m-console-figure > pre:first-child,
-.m-container-inflatable section:target [class*='m-center-'] > .m-note,
-.m-container-inflatable section:target [class*='m-center-'] > .m-frame,
-.m-container-inflatable section:target [class*='m-center-'] > .m-block,
-.m-container-inflatable section:target [class*='m-center-'] > pre,
-.m-container-inflatable section:target [class*='m-center-'] > figure.m-code-figure > pre:first-child,
-.m-container-inflatable section:target [class*='m-center-'] > figure.m-console-figure > pre:first-child,
-.m-container-inflatable section:target [class*='m-left-'] > .m-note,
-.m-container-inflatable section:target [class*='m-left-'] > .m-frame,
-.m-container-inflatable section:target [class*='m-left-'] > .m-block,
-.m-container-inflatable section:target [class*='m-left-'] > pre,
-.m-container-inflatable section:target [class*='m-left-'] > figure.m-code-figure > pre:first-child,
-.m-container-inflatable section:target [class*='m-left-'] > figure.m-console-figure > pre:first-child,
-.m-container-inflatable section:target [class*='m-right-'] > .m-note,
-.m-container-inflatable section:target [class*='m-right-'] > .m-frame,
-.m-container-inflatable section:target [class*='m-right-'] > .m-block,
-.m-container-inflatable section:target [class*='m-right-'] > pre,
-.m-container-inflatable section:target [class*='m-right-'] > figure.m-code-figure > pre:first-child,
-.m-container-inflatable section:target [class*='m-right-'] > figure.m-console-figure > pre:first-child,
-.m-container-inflatable section:target .m-container-inflate > .m-note,
-.m-container-inflatable section:target .m-container-inflate > .m-frame,
-.m-container-inflatable section:target .m-container-inflate > .m-block,
-.m-container-inflatable section:target .m-container-inflate > pre,
-.m-container-inflatable section:target .m-container-inflate > figure.m-code-figure > pre:first-child,
-.m-container-inflatable section:target .m-container-inflate > figure.m-console-figure > pre:first-child {
-  margin-left: -1.0rem;
-  border-left-style: solid;
-  border-left-width: 0.25rem;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  padding-left: 0.75rem;
+article > section > nav {
+  font-size: 85.4%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-bottom: 1.0rem;
+  padding-right: 0.5rem;
 }
-.m-container-inflatable section:target > figure.m-code-figure::before,
-.m-container-inflatable section:target > figure.m-console-figure::before,
-.m-container-inflatable section:target section > figure.m-code-figure::before,
-.m-container-inflatable section:target section > figure.m-console-figure::before,
-.m-container-inflatable section:target [class*='m-center-'] > figure.m-code-figure::before,
-.m-container-inflatable section:target [class*='m-center-'] > figure.m-console-figure::before,
-.m-container-inflatable section:target [class*='m-left-'] > figure.m-code-figure::before,
-.m-container-inflatable section:target [class*='m-left-'] > figure.m-console-figure::before,
-.m-container-inflatable section:target [class*='m-right-'] > figure.m-code-figure::before,
-.m-container-inflatable section:target [class*='m-right-'] > figure.m-console-figure::before,
-.m-container-inflatable section:target .m-container-inflate > figure.m-code-figure::before,
-.m-container-inflatable section:target .m-container-inflate > figure.m-console-figure::before {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-left-width: 0.25rem;
+article > section > nav > a {
+  text-decoration: none;
+  display: inline-block;
+  width: 1.5rem;
 }
-@media screen and (min-width: 576px) {
-  .m-container-inflatable section:target .m-center-s > .m-note,
-  .m-container-inflatable section:target .m-center-s > pre,
-  .m-container-inflatable section:target .m-center-s > figure.m-code-figure > pre:first-child,
-  .m-container-inflatable section:target .m-center-s > figure.m-console-figure > pre:first-child,
-  .m-container-inflatable section:target .m-right-s > figure.m-code-figure > pre:first-child,
-  .m-container-inflatable section:target .m-right-s > figure.m-console-figure > pre:first-child {
-    border-left-width: 0;
-    border-top-left-radius: 0.2rem;
-    border-bottom-left-radius: 0.2rem;
-    padding-left: 1rem;
+article > section > nav > a:link, article > section > nav > a:visited {
+  color: #c0c0c0;
+}
+article > section > nav > a:hover, article > section > nav > a:active {
+  color: #949494;
+}
+article > section > nav > a.m-presentation-cover {
+  text-align: center;
+  width: 2.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+article > section > nav > a.m-presentation-prev { text-align: right; }
+article > section > nav > a.m-presentation-prev::before { content: '«'; }
+article > section > nav > a.m-presentation-next { text-align: left; }
+article > section > nav > a.m-presentation-next::before { content: '»'; }
+article > section > aside.m-presenter {
+  display: none;
+}
+@media screen {
+  html:not(.m-presenter) article > section:first-child {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    overflow: hidden;
   }
-  .m-container-inflatable section:target .m-center-s > .m-block,
-  .m-container-inflatable section:target .m-right-s > .m-block {
-    border-top-left-radius: 0.2rem;
-    border-bottom-left-radius: 0.2rem;
-  }
-  .m-container-inflatable section:target .m-center-s > .m-frame,
-  .m-container-inflatable section:target .m-right-s > .m-frame {
-    border-top-left-radius: 0.2rem;
-    border-bottom-left-radius: 0.2rem;
-    border-left-width: 0.125rem;
-    padding-left: 0.875rem;
-  }
-  .m-container-inflatable section:target .m-right-s > .m-block,
-  .m-container-inflatable section:target .m-right-s > .m-frame {
-    margin-left: 0;
-  }
-  .m-container-inflatable section:target .m-right-s > .m-note,
-  .m-container-inflatable section:target .m-right-s > pre {
-    border-top-left-radius: 0.2rem;
-    border-bottom-left-radius: 0.2rem;
-    margin-left: 0;
-    border-left-width: 0;
-    padding-left: 1rem;
-  }
-  .m-container-inflatable section:target .m-center-s > figure.m-code-figure::before,
-  .m-container-inflatable section:target .m-center-s > figure.m-console-figure::before,
-  .m-container-inflatable section:target .m-right-s > figure.m-code-figure::before,
-  .m-container-inflatable section:target .m-right-s > figure.m-console-figure::before {
-    border-top-left-radius: 0.2rem;
-    border-bottom-left-radius: 0.2rem;
-    border-left-width: 0.125rem;
+  article > section { display: none; }
+  article > section:target { display: block; }
+}
+html:not(.m-presenter) .m-container { width: 100%; }
+@media print { .m-container { width: 100%; } }
+@media print {
+  article > aside { display: none; }
+  article > section > nav { display: none; }
+  body { -webkit-print-color-adjust: exact; }
+  article > section:last-child { height: 99.99999vh; }
+  article > section:not(:first-of-type) { page-break-before: always; }
+  @page {
+    margin: 0;
+    size: 297mm 167mm;
   }
 }
-@media screen and (min-width: 768px) {
-  .m-container-inflatable section:target .m-center-m > .m-note,
-  .m-container-inflatable section:target .m-center-m > pre,
-  .m-container-inflatable section:target .m-center-m > figure.m-code-figure > pre:first-child,
-  .m-container-inflatable section:target .m-center-m > figure.m-console-figure > pre:first-child,
-  .m-container-inflatable section:target .m-right-m > figure.m-code-figure > pre:first-child,
-  .m-container-inflatable section:target .m-right-m > figure.m-console-figure > pre:first-child {
-    border-left-width: 0;
-    border-top-left-radius: 0.2rem;
-    border-bottom-left-radius: 0.2rem;
-    padding-left: 1rem;
+@media screen {
+  html.m-presenter { font-size: 2.381vw; }
+  @media screen and (min-width: 576px) {
+    html.m-presenter { font-size: 13.3333px; }
   }
-  .m-container-inflatable section:target .m-center-m > .m-block,
-  .m-container-inflatable section:target .m-right-m > .m-block {
-    border-top-left-radius: 0.2rem;
-    border-bottom-left-radius: 0.2rem;
+  @media screen and (min-width: 768px) {
+    html.m-presenter { font-size: 14.8809px; }
   }
-  .m-container-inflatable section:target .m-center-m > .m-frame,
-  .m-container-inflatable section:target .m-right-m > .m-frame {
-    border-top-left-radius: 0.2rem;
-    border-bottom-left-radius: 0.2rem;
-    border-left-width: 0.125rem;
-    padding-left: 0.875rem;
+  @media screen and (min-width: 992px) {
+    html.m-presenter { font-size: 19.0476px; }
   }
-  .m-container-inflatable section:target .m-right-m > .m-block,
-  .m-container-inflatable section:target .m-right-m > .m-frame {
-    margin-left: 0;
+  html.m-presenter body {
+    overflow-y: scroll;
   }
-  .m-container-inflatable section:target .m-right-m > .m-note,
-  .m-container-inflatable section:target .m-right-m > pre {
-    border-top-left-radius: 0.2rem;
-    border-bottom-left-radius: 0.2rem;
-    margin-left: 0;
-    border-left-width: 0;
-    padding-left: 1rem;
+  html.m-presenter article {
+    position: relative;
+    margin: 0;
+    padding-top: 56.25%;
+    background-color: #ffffff;
   }
-  .m-container-inflatable section:target .m-center-m > figure.m-code-figure::before,
-  .m-container-inflatable section:target .m-center-m > figure.m-console-figure::before,
-  .m-container-inflatable section:target .m-right-m > figure.m-code-figure::before,
-  .m-container-inflatable section:target .m-right-m > figure.m-console-figure::before {
-    border-top-left-radius: 0.2rem;
-    border-bottom-left-radius: 0.2rem;
-    border-left-width: 0.125rem;
+  html.m-presenter article > aside,
+  html.m-presenter article > section {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
   }
-}
-@media screen and (min-width: 992px) {
-  .m-container-inflatable section:target .m-center-l > .m-note,
-  .m-container-inflatable section:target .m-center-l > pre,
-  .m-container-inflatable section:target .m-center-l > figure.m-code-figure > pre:first-child,
-  .m-container-inflatable section:target .m-center-l > figure.m-console-figure > pre:first-child,
-  .m-container-inflatable section:target .m-right-l > figure.m-code-figure > pre:first-child,
-  .m-container-inflatable section:target .m-right-l > figure.m-console-figure > pre:first-child {
-    border-left-width: 0;
-    border-top-left-radius: 0.2rem;
-    border-bottom-left-radius: 0.2rem;
-    padding-left: 1rem;
+  html.m-presenter article > *:first-child {
   }
-  .m-container-inflatable section:target .m-center-l > .m-block,
-  .m-container-inflatable section:target .m-right-l > .m-block {
-    border-top-left-radius: 0.2rem;
-    border-bottom-left-radius: 0.2rem;
+  html.m-presenter article > section > h1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    margin: 0;
   }
-  .m-container-inflatable section:target .m-center-l > .m-frame,
-  .m-container-inflatable section:target .m-right-l > .m-frame {
-    border-top-left-radius: 0.2rem;
-    border-bottom-left-radius: 0.2rem;
-    border-left-width: 0.125rem;
-    padding-left: 0.875rem;
+  html.m-presenter article > section > h1 + h2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0;
   }
-  .m-container-inflatable section:target .m-right-l > .m-block,
-  .m-container-inflatable section:target .m-right-l > .m-frame {
-    margin-left: 0;
+  html.m-presenter article > aside > aside.m-presenter,
+  html.m-presenter article > section > aside.m-presenter {
+    display: block;
+    position: absolute;
+    top: 0;
+    margin-top: 56.25%;
+    color: #000000;
+    font-size: 16px;
   }
-  .m-container-inflatable section:target .m-right-l > .m-note,
-  .m-container-inflatable section:target .m-right-l > pre {
-    border-top-left-radius: 0.2rem;
-    border-bottom-left-radius: 0.2rem;
-    margin-left: 0;
-    border-left-width: 0;
-    padding-left: 1rem;
+  html.m-presenter article > aside > aside.m-presenter {
+    padding-top: 1rem;
   }
-  .m-container-inflatable section:target .m-center-l > figure.m-code-figure::before,
-  .m-container-inflatable section:target .m-center-l > figure.m-console-figure::before,
-  .m-container-inflatable section:target .m-right-l > figure.m-code-figure::before,
-  .m-container-inflatable section:target .m-right-l > figure.m-console-figure::before {
-    border-top-left-radius: 0.2rem;
-    border-bottom-left-radius: 0.2rem;
-    border-left-width: 0.125rem;
+  html.m-presenter article > section > aside.m-presenter {
+    padding-top: 3rem;
   }
-}
-.m-container-inflatable section:target > figure.m-code-figure::before,
-.m-container-inflatable section:target > figure.m-console-figure::before,
-.m-container-inflatable section:target section > figure.m-code-figure::before,
-.m-container-inflatable section:target section > figure.m-console-figure::before,
-.m-container-inflatable section:target [class*='m-center-'] > figure.m-code-figure::before,
-.m-container-inflatable section:target [class*='m-center-'] > figure.m-console-figure::before,
-.m-container-inflatable section:target [class*='m-left-'] > figure.m-code-figure::before,
-.m-container-inflatable section:target [class*='m-left-'] > figure.m-console-figure::before,
-.m-container-inflatable section:target [class*='m-right-'] > figure.m-code-figure::before,
-.m-container-inflatable section:target [class*='m-right-'] > figure.m-console-figure::before,
-.m-container-inflatable section:target .m-container-inflatable > figure.m-code-figure::before,
-.m-container-inflatable section:target .m-container-inflatable > figure.m-console-figure::before {
-  border-left-color: #f7e3db;
-}
-@media screen and (min-width: 576px) {
-  .m-container-inflatable section:target .m-center-s > figure.m-code-figure::before,
-  .m-container-inflatable section:target .m-right-s > figure.m-code-figure::before {
-    border-color: #fbf0ec;
+  html.m-presenter article > section > aside.m-presenter code,
+  html.m-presenter article > section > aside.m-presenter pre {
+    color: #000000;
+    background-color: transparent;
+    font-size: 0.9em;
   }
-  .m-container-inflatable section:target .m-center-s > figure.m-console-figure::before,
-  .m-container-inflatable section:target .m-right-s > figure.m-console-figure::before {
-    border-color: #000000;
-  }
-}
-@media screen and (min-width: 768px) {
-  .m-container-inflatable section:target .m-center-m > figure.m-code-figure::before,
-  .m-container-inflatable section:target .m-right-m > figure.m-code-figure::before {
-    border-color: #fbf0ec;
-  }
-  .m-container-inflatable section:target .m-center-m > figure.m-console-figure::before,
-  .m-container-inflatable section:target .m-right-m > figure.m-console-figure::before {
-    border-color: #000000;
-  }
-}
-@media screen and (min-width: 992px) {
-  .m-container-inflatable section:target .m-center-l > figure.m-code-figure::before,
-  .m-container-inflatable section:target .m-right-l > figure.m-code-figure::before {
-    border-color: #fbf0ec;
-  }
-  .m-container-inflatable section:target .m-center-l > figure.m-console-figure::before,
-  .m-container-inflatable section:target .m-right-l > figure.m-console-figure::before {
-    border-color: #000000;
-  }
-}
-.m-container-inflatable section:target pre,
-.m-container-inflatable section:target figure.m-code-figure > pre:first-child,
-.m-container-inflatable section:target figure.m-console-figure > pre:first-child {
-  border-color: #f7e3db;
-}
-.m-container-inflatable section:target .m-note.m-default {
-  border-color: #f7e3db;
-}
-.m-container-inflatable section:target .m-note.m-primary  {
-  border-color: #cb4b16;
-}
-.m-container-inflatable section:target .m-note.m-success {
-  border-color: #31c25d;
-}
-.m-container-inflatable section:target .m-note.m-warning {
-  border-color: #c7cf2f;
-}
-.m-container-inflatable section:target .m-note.m-danger {
-  border-color: #f60000;
-}
-.m-container-inflatable section:target .m-note.m-info {
-  border-color: #2e7dc5;
-}
-.m-container-inflatable section:target .m-note.m-dim {
-  border-color: #bdbdbd;
 }
 
 .m-console .hll { background-color: #ffffcc }

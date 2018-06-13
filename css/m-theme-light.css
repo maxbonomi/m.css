@@ -24,10 +24,10 @@
 
 :root {
   /* Text properties */
-  --font: 'Libre Baskerville', serif;
+  --font: 'Source Sans Pro', sans-serif;
   --code-font: 'Source Code Pro', monospace;
-  --font-size: 14px;
-  --code-font-size: 1em; /* *not* rem, so it follows surrounding font size */
+  --font-size: 16px;
+  --code-font-size: 0.9em; /* *not* rem, so it follows surrounding font size */
   --paragraph-indent: 1.5rem;
   --paragraph-align: justify;
   --link-decoration: underline;
@@ -52,7 +52,7 @@
   --mark-color: #4c93d3;
   --mark-background-color: #e6e69c;
   --code-color: #5b5b5b;
-  --code-inverted-color: rgba(91, 91, 91, 0.33);
+  --code-inverted-color: rgba(91, 91, 91, 0.6);
   --code-background-color: #fbf0ec;
   --code-note-background-color: rgba(251, 240, 236, 0.5);
   --console-background-color: #000000;

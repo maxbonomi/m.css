@@ -301,9 +301,11 @@ class SaneHtmlTranslator(HTMLTranslator):
 
     # Use HTML5 <section> tag for sections (instead of <div class="section">)
     def visit_section(self, node):
+        atts = {}
+        if 'styles' in node: atts['styles'] = '; '.join(node['styles'])
         self.section_level += 1
         self.body.append(
-            self.starttag(node, 'section'))
+            self.starttag(node, 'section', **atts))
 
     def depart_section(self, node):
         self.section_level -= 1
@@ -582,6 +584,54 @@ class SaneHtmlTranslator(HTMLTranslator):
             self.html_title.extend(self.body)
             del self.body[:]
 
+    ## h1–h6 elements must not be used to markup subheadings, subtitles,
+    ## alternative titles and taglines unless intended to be the heading for a
+    ## new section or subsection.
+    ## -- http://www.w3.org/TR/html/sections.html#headings-and-sections
+    #def visit_subtitle(self, node):
+        #if isinstance(node.parent, nodes.sidebar):
+            #classes = 'sidebar-subtitle'
+        #elif isinstance(node.parent, nodes.document):
+            #classes = 'subtitle'
+            #self.in_document_title = len(self.body)
+        #elif isinstance(node.parent, nodes.section):
+            #classes = 'section-subtitle'
+        #self.body.append(self.starttag(node, 'p', '', CLASS=classes))
+
+    #def depart_subtitle(self, node):
+        #self.body.append('</p>\n')
+        #if self.in_document_title:
+            #self.subtitle = self.body[self.in_document_title:-1]
+            #self.in_document_title = 0
+            #self.body_pre_docinfo.extend(self.body)
+            #self.html_subtitle.extend(self.body)
+            #del self.body[:]
+    # Use <h*> for subtitles (deprecated in HTML 5)
+    def visit_subtitle(self, node):
+        if isinstance(node.parent, nodes.sidebar):
+            self.body.append(self.starttag(node, 'p', '',
+                                           CLASS='sidebar-subtitle'))
+            self.context.append('</p>\n')
+        elif isinstance(node.parent, nodes.document):
+            self.body.append(self.starttag(node, 'h2', '', CLASS='subtitle'))
+            self.context.append('</h2>\n')
+            self.in_document_title = len(self.body)
+        elif isinstance(node.parent, nodes.section):
+            tag = 'h%s' % (self.section_level + self.initial_header_level - 1)
+            self.body.append(
+                self.starttag(node, tag, '', CLASS='section-subtitle') +
+                self.starttag({}, 'span', '', CLASS='section-subtitle'))
+            self.context.append('</span></%s>\n' % tag)
+
+    def depart_subtitle(self, node):
+        self.body.append(self.context.pop())
+        if self.in_document_title:
+            self.subtitle = self.body[self.in_document_title:-1]
+            self.in_document_title = 0
+            self.body_pre_docinfo.extend(self.body)
+            self.html_subtitle.extend(self.body)
+            del self.body[:]
+
     # <ul>, <ol>, <dl> -- verbatim copied, removing "simple" class. For <ol>
     # also removing the enumtype
     def visit_bullet_list(self, node):
@@ -707,6 +757,12 @@ def expand_links(text, content):
 def format_siteurl(url):
     return urljoin(settings['SITEURL'] + ('/' if not settings['SITEURL'].endswith('/') else ''), url)
 
+def configure(setting_overrides):
+    global settings
+    settings['FORMATTED_FIELDS'] = setting_overrides.get('FORMATTED_FIELDS', [])
+    settings['M_HTMLSANITY_HYPHENATION'] = setting_overrides.get('M_HTMLSANITY_HYPHENATION', False)
+    settings['M_HTMLSANITY_SMART_QUOTES'] = setting_overrides.get('M_HTMLSANITY_SMART_QUOTES', False)
+
 def configure_pelican(pelicanobj):
     pelicanobj.settings['JINJA_FILTERS']['render_rst'] = render_rst
     pelicanobj.settings['JINJA_FILTERS']['expand_link'] = expand_link
@@ -715,10 +771,8 @@ def configure_pelican(pelicanobj):
     pelicanobj.settings['JINJA_FILTERS']['hyphenate'] = hyphenate
     pelicanobj.settings['JINJA_FILTERS']['dehyphenate'] = dehyphenate
 
-    global settings
-    settings['M_HTMLSANITY_HYPHENATION'] = pelicanobj.settings.get('M_HTMLSANITY_HYPHENATION', False)
-    settings['M_HTMLSANITY_SMART_QUOTES'] = pelicanobj.settings.get('M_HTMLSANITY_SMART_QUOTES', False)
-    for i in 'DEFAULT_LANG', 'DOCUTILS_SETTINGS', 'INTRASITE_LINK_REGEX', 'SITEURL', 'FORMATTED_FIELDS':
+    configure(pelicanobj.settings)
+    for i in 'DEFAULT_LANG', 'DOCUTILS_SETTINGS', 'INTRASITE_LINK_REGEX', 'SITEURL':
         settings[i] = pelicanobj.settings[i]
 
 def add_reader(readers):

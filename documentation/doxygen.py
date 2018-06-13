@@ -1032,6 +1032,9 @@ def parse_desc_internal(state: State, element: ET.Element, immediate_parent: ET.
 
                 # Not continuing with a section from before, put a header in
                 if not previous_section or (i.attrib['kind'] != 'par' and previous_section != i.attrib['kind']) or (i.attrib['kind'] == 'par' and i.find('title').text):
+                    # TODO: make it possible to override the class using @m_class,
+                    # document this and document behavior of @par
+
                     if i.attrib['kind'] == 'see':
                         title = 'See also'
                         css_class = 'm-default'
@@ -1415,7 +1418,7 @@ def parse_desc_internal(state: State, element: ET.Element, immediate_parent: ET.
             else:
                 # Put some bogus prefix to the filename in case it is just
                 # `.ext`
-                lexer = find_lexer_class_for_filename("code" + filename)
+                lexer = find_lexer_class_for_filename(filename)
                 if not lexer:
                     logging.warning("{}: unrecognized language of {} in <programlisting>, highlighting disabled".format(state.current, filename))
                     lexer = TextLexer()
