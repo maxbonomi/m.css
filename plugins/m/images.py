@@ -210,7 +210,7 @@ class ImageGrid(rst.Directive):
 
             # Open the files and calculate the overall width
             # Support both {filename} (3.7.1) and {static} (3.8) placeholders
-            file = os.path.join(os.getcwd(), settings['PATH'])
+            file = os.path.join(os.getcwd(), settings.get('PATH', ''))
             absuri = uri.format(filename=file, static=file)
             im = PIL.Image.open(absuri)
 

@@ -42,7 +42,7 @@ import urllib
 from importlib.machinery import SourceFileLoader
 from types import SimpleNamespace as Empty
 
-sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)), '../pelican-plugins'))
+sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)), '../plugins'))
 import m.htmlsanity
 import m.code
 import m.components
