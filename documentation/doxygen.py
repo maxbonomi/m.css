@@ -333,6 +333,8 @@ class Trie:
 
         # Serialize this node
         serialized = bytearray()
+        # MB: horrible workaround to make it work with PLUMED developer manual
+        if(len(self.results)>255): return 0
         serialized += self.header_struct.pack(len(self.results), len(self.children))
         for v in self.results:
             serialized += self.result_struct.pack(v)
